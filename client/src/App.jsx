@@ -5,34 +5,41 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import UserManagement from "./pages/UserManagement";
+import Products from "./pages/Products";
+import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-function App(){
-    return(
+function App() {
+    return (
         <BrowserRouter>
-
             <Routes>
-
-                <Route
-                    path="/"
-                    element={<Login />}
-                />
-
-                <Route
-                    path="/login"
-                    element={<Login />}
-                />
-
-                <Route
-                    path="/register"
-                    element={<Register />}
-                />
+                <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
 
                 <Route
                     path="/dashboard"
                     element={
                         <ProtectedRoute>
                             <Dashboard />
+                        </ProtectedRoute>
+                    }
+                />
+
+                <Route
+                    path="/products"
+                    element={
+                        <ProtectedRoute>
+                            <Products />
+                        </ProtectedRoute>
+                    }
+                />
+
+                <Route
+                    path="/profile"
+                    element={
+                        <ProtectedRoute>
+                            <Profile />
                         </ProtectedRoute>
                     }
                 />
@@ -54,9 +61,7 @@ function App(){
                         </ProtectedRoute>
                     }
                 />
-
             </Routes>
-
         </BrowserRouter>
     );
 }

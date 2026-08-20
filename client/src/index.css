@@ -24,7 +24,7 @@ h3 {
 
 /* Forms */
 form {
-    width: 400px;
+    width: 450px;
     max-width: 90%;
     margin: 20px auto;
     padding: 25px;
@@ -40,16 +40,17 @@ form label {
     font-weight: bold;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    background-color: white;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
     border-color: #2563eb;
 }
@@ -69,6 +70,11 @@ button:hover {
     background-color: #1d4ed8;
 }
 
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
 /* Links */
 a {
     color: #2563eb;
@@ -79,14 +85,14 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Normal paragraphs */
+/* Paragraphs */
 p {
     line-height: 1.5;
 }
 
 /* Dashboard content */
 body > #root > div {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 body > #root > div > h2,
@@ -98,7 +104,7 @@ body > #root > div > a {
     margin-right: auto;
 }
 
-/* Admin/User information */
+/* Information Box */
 body > #root > div > h2 {
     background-color: white;
     padding: 15px;
@@ -114,22 +120,7 @@ hr {
     border-top: 1px solid #ddd;
 }
 
-/* Manage Users link */
-body > #root > div > a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 9px 15px;
-    background-color: #2563eb;
-    color: white;
-    border-radius: 5px;
-}
-
-body > #root > div > a:hover {
-    background-color: #1d4ed8;
-    text-decoration: none;
-}
-
-/* User Management table */
+/* Tables */
 table {
     width: 90%;
     max-width: 1000px;
@@ -155,22 +146,12 @@ tr:hover {
     background-color: #fafafa;
 }
 
-/* Table buttons */
 td button {
     margin-right: 6px;
 }
 
-td button:last-child {
-    background-color: #dc2626;
-}
-
-td button:last-child:hover {
-    background-color: #b91c1c;
-}
-
 /* Mobile */
 @media (max-width: 600px) {
-
     h1 {
         font-size: 25px;
     }
